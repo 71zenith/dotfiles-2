@@ -1,0 +1,10 @@
+[Default Applications]
+image/jpeg=mpv.desktop
+image/png=mpv.desktop
+image/gif=mpv.desktop
+application/pdf=org.pwmt.zathura.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+text/html=firefox.desktop
+inode/directory=file.desktop
+text/plain=editor.desktop

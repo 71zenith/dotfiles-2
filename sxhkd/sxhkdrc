@@ -1,0 +1,98 @@
+# misc {{{
+# terminal emulator
+alt + Return
+  alacritty
+
+# make sxhkd reload its configuration files
+alt + Escape
+  pkill -USR1 -x sxhkd
+
+# moc scratchpad
+alt + shift + Return
+  bspc node $(cat /tmp/scratchid) -g hidden;bspc node -f $(cat /tmp/scratchid)
+
+# set the window state
+alt + shift + s
+  bspc node -t {floating,tiled}
+#}}}
+ 
+# bspwm hotkeys {{{
+# restart bspwm
+alt + shift +r
+  bspc wm -r
+
+# kill bspwm
+alt + shift + q
+  bspc quit
+
+# close an application
+alt + x
+  bspc node -c
+
+# kill an application
+alt + q
+  bspc node -k
+  j
+# alternate between the tiled and monocle layout
+alt + t
+  bspc desktop -l next
+# }}}
+
+# focus/swap {{{
+# swap the node in the given direction
+alt + control + {h,j,k,l}
+  bspc node -s {west,south,north,east}.local
+
+# focus the next/previous window in the current desktop
+alt + {l,h}
+  bspc node -f {next,prev}.local.!hidden.window
+alt + {_,shift} + Tab
+  bspc node -f {next,prev}.local.!hidden.window
+
+# focus or send to the given desktop
+alt + {_,shift + }{1-6,0}
+  bspc {desktop -f,node -d} '^{1-6,10}'
+# }}}
+
+# volume control {{{
+super + 1
+  pulsemixer --change-volume +5
+super + 2 
+  pulsemixer --change-volume -5
+super + 3
+  pulsemixer --toggle-mute
+# }}}
+
+# launch application {{{
+alt + e
+  alacritty -e lf
+alt + shift + c
+  killall Discord || discord
+alt + shift + a
+  alacritty -e nvim
+# }}}
+
+# custom dmenu prompts {{{
+alt + shift + f
+  firefox
+alt + shift + g
+  clipmenu -l 15 -i
+alt + f ; {a,y,g,s,m}
+  dmenu_search firefox {ArchWiki,Youtube,Github,Search,Animixplay}
+# }}}
+
+# media control {{{
+ctrl + 1
+  mocp -M ~/.config/moc/ -G
+ctrl + 2
+  mocp -M ~/.config/moc/ -f
+ctrl + 3
+  mocp -M ~/.config/moc/ -r
+
+ctrl + q
+  playerctl --player=firefox play-pause
+ctrl + Escape
+  playerctl --player=mpv play-pause
+# }}}
+
+# vim:foldmethod=marker

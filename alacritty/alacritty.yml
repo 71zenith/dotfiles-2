@@ -3,8 +3,6 @@ font:
     family: Iosevka Nerd Font
     style: Regular
   size: 14.5
-window:
-  opacity : 0.90
 
 key_bindings:
   - { key: K,    mods: Alt,        action: ScrollLineUp   }

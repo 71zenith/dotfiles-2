@@ -12,3 +12,4 @@ PlaylistFullPaths = no
 OnSongChange = /home/zen/.local/bin/notify_song
 HideFileExtension = yes
 ShowFormat = no
+ReadTags = no

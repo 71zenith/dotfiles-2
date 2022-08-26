@@ -97,7 +97,7 @@ format-foreground = #87CEFA
 [module/uptime]
 type = custom/script
 exec = uptime -p | sed -e 's/up //' -e 's/\ years\?,/y/' -e 's/\ weeks\?,/w/' -e 's/\ days\?,/d/' -e 's/\ hours\?,\?/h/' -e 's/\ minutes\?/m/'
-format-prefix = "🖥️ "
+format-prefix = "💻 "
 interval = 30
 format-foreground = #5F9EA0
 

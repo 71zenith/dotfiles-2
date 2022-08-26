@@ -11,7 +11,7 @@ killall -q polybar
 polybar mybar 2>&1 >/tmp/polybar.log &
 pgrep bspswallow || bspswallow &
 
-bspc monitor -d home tv www dev chat trash
+bspc monitor -d 1 2 3 4 5
 
 bspc config focus_follows_pointer	true
 
@@ -29,7 +29,6 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc rule -a Zathura state=tiled
-bspc rule -a discord follow=off focus=off desktop=^5
 bspc rule -a scratchpad sticky=on state=floating hidden=on locked=on
 
 [ "$(pgrep -c 'mocp')" != "2" ] && alacritty --option window.opacity=1.0 --option font.size=14.5 --class scratchpad,scratchpad -e scratch

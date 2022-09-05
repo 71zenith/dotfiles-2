@@ -3,6 +3,9 @@
 # some variables
 export ZDOTDIR="$HOME/.config/zsh"
 export PATH="$HOME/.local/bin:$PATH"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 export EDITOR="nvim"
 export SPACESHIP_VI_MODE_SHOW=false
 export LESSHISTFILE="-"

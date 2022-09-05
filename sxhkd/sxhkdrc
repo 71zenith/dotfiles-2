@@ -66,10 +66,6 @@ super + 3
 # launch application {{{
 alt + e
   alacritty -e lf
-alt + shift + c
-  killall Discord || discord
-alt + shift + a
-  alacritty -e nvim
 # }}}
 
 # custom dmenu prompts {{{

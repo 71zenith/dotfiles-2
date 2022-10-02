@@ -87,4 +87,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 # prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+setxkbmap -option caps:escape
+xset r rate 300 50
 # vim:foldmethod=marker

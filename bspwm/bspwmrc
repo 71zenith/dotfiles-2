@@ -6,7 +6,7 @@ dunst 2> /tmp/dunst.log &
 CM_SELECTIONS=clipboard clipmenud 2> /tmp/clipmenu.log &
 picom &
 blueman-applet &
-xwallpaper --zoom ~/.config/bspwm/bg.png
+xwallpaper --focus ~/.config/bspwm/bg.png
 fcitx &
 killall -q polybar
 polybar mybar 2>&1 >/tmp/polybar.log &
